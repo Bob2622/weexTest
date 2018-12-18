@@ -1,5 +1,6 @@
 <template>
     <div>
+        <text>1111111111222</text>
         <gcanvas v-if="isWeex" ref="canvas_holder" style="width:750px;height:400px;"></gcanvas>
         <canvas v-if="!isWeex" ref="canvas_holder" style="width:100%;height:100%;"></canvas>
     </div>
@@ -15,8 +16,9 @@ export default {
     data() {
         return {
             isWeex: isWeex ? 1 : 0
-        },
-
+        }
+    },
+    methods: {
         // 绘制红色区域
         renderRedRect () {
             let ref = this.$refs.canvas_holder;
@@ -103,7 +105,7 @@ export default {
         this.renderRedRect();
 
         // 直接使用 F2 绘制图表
-        // this.renderNativeF2();
+        this.renderNativeF2();
 
         // 使用扩展的 F2 绘制图表
         // this.renderF2Extend();

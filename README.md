@@ -24,3 +24,6 @@ pod install
 // 运行模拟器
 weex run ios
 ```
+
+> 坑点
+- App store 目前下载的 weex playground 不集成 Gcanvas。所以直接下载的无法展示
