@@ -26,4 +26,32 @@ weex run ios
 ```
 
 > 坑点
-- App store 目前下载的 weex playground 不集成 Gcanvas。所以直接下载的无法展示
+- App store 目前下载的 weex playground 不集成 Gcanvas。所以直接下载的无法展示.<br>
+  编译包含制定插件的 weex playground
+    1. 下载 weex 项目
+        ```
+        git clone https://github.com/apache/incubator-weex        
+        ```
+    2. 安装插件
+        ```
+        cd incubator-weex/ios/playground
+        vim Podfile
+        ```
+       在 `Podfile` 中添加代码
+        ```
+        pod ‘WeexGcanvas'
+        pod 'WeexPluginLoader'
+        ```
+       安装插件
+       ```
+       pod install
+       ```
+    3. 用 xcode 打开项目(项目路径 incubator-weex/ios/playground)
+    4. 配置项目
+       ![](./static/weex-palyground-compile1.png)
+    5. 选择真机
+       ![](./static/weex-palyground-compile2.png)
+    6. 点击编译
+    7. 手机上信任程序: 设置 -> 通用 -> 设备管理 -> 点击属于自己账户的开发者, 选择信任
+    8. [参考资料](https://zhuanlan.zhihu.com/p/25227030)
+
