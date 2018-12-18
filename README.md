@@ -1,27 +1,26 @@
-# Introduction
+## weex 中集成 F2 实现图表功能
+> 环境
+- macOS: `v10.14.1`
+- nodeJS: `v8.12.0`
+- npm: `v6.4.1`
+- weex: `v1.3.11`
+- WeexSDK: `0.20.1`
+- WeexGcanvas: `0.1.2`
+- F2: `3.1.0`
 
-This boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with Webpack and `weex-loader`. 
-
-## Quickstart
-
-To use this template, scaffold a project with [weexpack v1.1.1+](https://github.com/weexteam/weex-pack).
-
-``` bash
-$ npm install -g weex-toolkit
-$ weex create my-project # default will create the webpack template
-$ cd my-project && npm start
-```
-
-## How to use less/sass/pug
-
-Take `sass` for example:
+> 运行工程
 
 ```
-$ npm i node-sass sass-loader --save
+// 进入工程
+cd weeTest
+
+// 安装 npm 包
+npm install
+
+// 安装 ios 插件
+cd platforms/ios
+pod install
+
+// 运行模拟器
+weex run ios
 ```
-
-Then, you just need to change the `style` tag as: `<style lang="sass"><style>`.
-
-## How to create your own template
-
-See [How-to-create-your-own-template](https://github.com/weex-templates/How-to-create-your-own-template).
