@@ -1,0 +1,4 @@
+/node_modules/**
+/.tmp/**
+/platforms/ios/**
+!/platforms/ios/Podfile
